@@ -114,11 +114,20 @@
   float: right;
 }
 .paswrong{
-  color: #f43e4b;
+  color: #fa8072;
   font-family: "微软雅黑";
   font-size: 15px;
-  position: absolute;
-  bottom: 505px;
-  right:320px;
+  position: relative;
+  bottom: 212px;
+  left:370px;
+  display: none;
+}
+.paswdtip{
+  color: #ccc;
+  font-family: "微软雅黑";
+  font-size: 15px;
+  position: relative;
+  bottom: 268px;
+  left:440px;
   display: none;
 }

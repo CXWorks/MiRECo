@@ -45,14 +45,15 @@ function buttonset(){
     }
     $telform.slideUp(100);
   }
-  //按钮划过特效设置
+  //按钮特效设置
   var $input01 = $('.input01'),
       $chenumtime = $('#chenum-time'),
       $registerIn = $('.registerIn'),
       $paswd = $('#paswd'),
       $repaswd = $('#repaswd'),
       $relog = $('.relog'),
-      $paswrong = $('.paswrong');
+      $paswrong = $('.paswrong'),
+      $paswdtip = $('.paswdtip');
 //填写框类型鼠标滑过红色填充阴影
  $input01.on({
    focusin: function(e){$(this).css('border-color','#f43e4b')},
@@ -74,11 +75,20 @@ $paswd.keyup(function(e){
   }else {
     e.target.type = "password";
   }
+  if($repaswd.val() != '确认密码'){
+    if (e.target.value != $repaswd.val()){
+      $paswrong.fadeIn();
+    }else if(e.target.value == $repaswd.val()){
+      $paswrong.css('display','none');
+    }
+  }
+  $paswdtip.fadeIn()
 });
 $paswd.focusout(function(e){
   if(e.target.value ==''){
     e.target.type = "text";
   }
+  $paswdtip.fadeOut();
 });
 $repaswd.keyup(function(e){
   if(e.target.value == '确认密码'){
