@@ -1,0 +1,119 @@
+*{margin:0;padding: 0}
+.registerCard{
+  width: 800px;
+  height:600px;
+  border: 1px solid #ccc;
+  background: #fff;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  margin:7% auto;
+}
+#registerTag{
+  font-family: "微软雅黑";
+  font-size: 25px;
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-bottom: 50px;
+}
+#telnum .input01{
+  cursor: pointer;
+}
+.telchoose{
+  width: 303px;
+  border: 1px #ccc solid;
+  margin-top: -10px;
+  background-color: #fff;
+  z-index: 999;
+  position: absolute;
+}
+#telchoose li{
+  list-style-type: none;
+  cursor: pointer;
+  color: #868686;
+  text-indent: 1em;
+  margin-bottom: 2px;
+}
+.cardContent{
+  margin:20px auto;
+  width: 300px;
+}
+.input01{
+  width:300px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px #ccc solid;
+  color: #868686;
+  font-size: 16px;
+  padding: 2px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  -border-radius: 6px;
+  outline: none;
+  margin-bottom: 10px;
+}
+/*.input03{
+  width:300px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px #ccc solid;
+  color: #868686;
+  font-size: 16px;
+  padding: 2px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  -border-radius: 6px;
+  -moz-box-shadow: 0 0 8px #000;
+  -webkit-box-shadow: 0 0 8px #000;
+  box-shadow: 0 0 8px #000;
+  outline: none;
+  margin-bottom: 10px;
+}*/
+.check-number #chenum{
+  width:140px;
+  height:40px;
+  border: 1px #ccc solid;
+  color: #868686;
+  font-size: 16px;
+  padding: 2px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  -border-radius: 6px;
+  outline: none;
+  margin-bottom: 6px;
+}
+#chenum-time {
+  width:90px;
+  height:40px;
+  line-height: 40px;
+  background-color: #f43e4b;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  -border-radius: 6px;
+  margin-bottom: 6px;
+  float: right;
+  text-align: center;
+}
+#chenum-time a{
+  text-decoration:none;
+  color:#ffffcc;
+}
+.registerIn .registerInCard{
+  width:300px;
+  height:40px;
+}
+.registerIn{
+  width:300px;
+  height:70px;
+  line-height: 70px;
+  border:1px #f43e4b solid;
+  margin-top: 25px;
+  color:#f43e4b;
+  text-align: center;
+  font-family: "微软雅黑";
+  font-size: 20px;
+  cursor: pointer;
+}
