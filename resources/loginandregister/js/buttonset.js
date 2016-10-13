@@ -51,7 +51,8 @@ function buttonset(){
       $registerIn = $('.registerIn'),
       $paswd = $('#paswd'),
       $repaswd = $('#repaswd'),
-      $relog = $('.relog');
+      $relog = $('.relog'),
+      $paswrong = $('.paswrong');
 //填写框类型鼠标滑过红色填充阴影
  $input01.on({
    focusin: function(e){$(this).css('border-color','#f43e4b')},
@@ -66,7 +67,38 @@ $registerIn.on({
   mouseover: function(e){$(this).css({'border-color':'#fa8072','color':'#fa8072'})},
   mouseout: function(e){$(this).css({'border-color':'#f43e4b','color':'#f43e4b'})}
 })
-//密码确认密码填写框输入type变换以及如果两次输入内容不一致报错
+//密码确认密码填写框输入type变换
+$paswd.keyup(function(e){
+  if(e.target.value == '密码'){
+    e.target.type = "text";
+  }else {
+    e.target.type = "password";
+  }
+});
+$paswd.focusout(function(e){
+  if(e.target.value ==''){
+    e.target.type = "text";
+  }
+});
+$repaswd.keyup(function(e){
+  if(e.target.value == '确认密码'){
+    e.target.type = "text";
+  }else {
+    e.target.type = "password";
+  }
+  //两次密码输入不一致报错
+  if (e.target.value != $paswd.val()){
+    $paswrong.fadeIn();
+  }else if(e.target.value == $paswd.val()){
+    $paswrong.css('display','none');
+  }
+});
+$repaswd.focusout(function(e){
+  if(e.target.value ==''){
+    e.target.type = "text";
+    $paswrong.css('display','none');
+  }
+});
 
 //验证码发送按钮点击开始倒计时设置
 
