@@ -1,5 +1,7 @@
 window.onload=buttonset;
 function buttonset(){
+  //整张注册卡出现的动画演示
+  $('registerCard').show(500);
   //选项卡选取国家区号特效设置
   var $telnum = $('#telnum'),
       $telform = $('.telchoose'),
@@ -13,7 +15,7 @@ function buttonset(){
     }else{
          e.cancelBubble=true;
     }
-    $telform.css("display","block");
+    $telform.slideDown(100);
   })
   $tellis.on({
     mouseover: function(e){
@@ -32,7 +34,7 @@ function buttonset(){
            e.cancelBubble=true;
       }
       $telbar.text($(this).text());
-      $telform.css("display","none");
+      $telform.slideUp(100);
     }
   })
   document.onclick = function(e){
@@ -42,7 +44,7 @@ function buttonset(){
     }else{
          e.cancelBubble=true;
     }
-    $telform.css("display","none");
+    $telform.slideUp(100);
   }
   //按钮划过特效设置
   var $input01 = $('.input01'),

@@ -23,6 +23,9 @@
   border: 1px #ccc solid;
   margin-top: -10px;
   background-color: #fff;
+  -moz-box-shadow: 0 0 2px #ccc;
+  -webkit-box-shadow: 0 0 2px #ccc;
+  box-shadow: 0 0 2px #ccc;
   z-index: 999;
   position: absolute;
 }
