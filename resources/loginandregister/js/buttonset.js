@@ -82,8 +82,9 @@ $paswd.keyup(function(e){
       $paswrong.css('display','none');
     }
   }
-  $paswdtip.fadeIn()
+  $paswdtip.fadeIn();
 });
+
 $paswd.focusout(function(e){
   if(e.target.value ==''){
     e.target.type = "text";
@@ -109,7 +110,6 @@ $repaswd.focusout(function(e){
     $paswrong.css('display','none');
   }
 });
-
 //验证码发送按钮点击开始倒计时设置
 
 //返回登陆按钮设置
