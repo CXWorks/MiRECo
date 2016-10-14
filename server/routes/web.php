@@ -1,5 +1,7 @@
 <?php
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -12,6 +14,8 @@
 */
 
 $app->get('/', function () use ($app) {
-	echo 'hello';
     return $app->version();
 });
+$app->get('/checkuser', 'UserController@checkUsername');
+$app->post('/register', 'UsrController@register');
+$app->post('/login/{method}', 'UserController@login');
