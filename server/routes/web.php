@@ -17,5 +17,5 @@ $app->get('/', function () use ($app) {
     return $app->version();
 });
 $app->get('/checkuser', 'UserController@checkUsername');
-$app->post('/register', 'UsrController@register');
+$app->post('/register', 'UserController@register');
 $app->post('/login/{method}', 'UserController@login');

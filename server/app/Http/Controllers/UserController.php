@@ -2,18 +2,34 @@
 /*
 	UserController.php
 	author cxworks
-	下午6:57:41
+	锟斤拷锟斤拷6:57:41
 */
 namespace App\Http\Controllers;
 
 use Laravel\Lumen\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends BaseController
 {
+	
+	function checkUnique($table,$key,$value) {
+	
+		$target=DB::table($table)->where($key, $value)->value($key);
+		return $target==null;
+	
+	}
+	function json_ok($param) {
+		
+		return response()->json(['ret'=>'ok','msg'=>$param]);
+	}
+	function checkLogin($key,$value,$pass) {
+		$right=DB::table('users')->where($key,$value)->value('password');
+		return $right===$pass;
+	}
 	/**
-	 * 检查用户名、手机号是否被注册
+	 * check unique
 	 * @param Request $request
 	 * @return string
 	 */
@@ -23,12 +39,15 @@ class UserController extends BaseController
 			case 'phone':
 				$phone=$_GET['phone'];
 				//call db
-				return $check.$phone;
+				$ans=$this->checkUnique('users',$check,$phone);
+				return $this->json_ok($ans);
 				break;
 			case 'username':
 				$username=$_GET['username'];
 				//call db
-				return $check.$username;
+				$ans=$this->checkUnique('users',$check,$username);
+				return $this->json_ok($ans);
+				
 				break;
 			
 			default:
@@ -41,11 +60,21 @@ class UserController extends BaseController
 	 * @return string
 	 */
 	function register(Request $request) {
-		$phone=$_POST['phonenum'];
-		$username=$_POST['username'];
-		$password=$_POST['password'];
+		
+		
+			$phone=$request->input('phonenum');
+		
+			$username=$request->input('username');
+		
+		
+			$password=$request->input('password');
+		
+		
+			$email=$request->input('email');
+		
 		//call db
-		return $phone.' '.$password.' '.$username;
+		DB::table('users')->insert(['username'=>$username,'phone'=>$phone,'email'=>$email,'password'=>$password]);
+		return $this->json_ok('success');
 	}
 	/**
 	 * user login
@@ -56,16 +85,22 @@ class UserController extends BaseController
 	function login(Request $request,$method) {
 		switch ($method) {
 			case 'username':
-				$username=$_POST['username'];
-				$password=$_POST['password'];
-				//call db
-				return 'use username';
+				$username=$request->input('username');
+				$password=$request->input('password');
+				if ($this->checkLogin($method, $username, $password)) {
+					return $this->json_ok('success');
+				}
+				else 
+					return $this->json_ok('fail');
 				break;
 			case 'phone':
-				$phone=$_POST['phone'];
-				$password=$_POST['password'];
-				//call db
-				return  'use phone';
+				$phone=$request->input('phonenum');
+				$password=$request->input('password');
+				if ($this->checkLogin($method, $phone, $password)) {
+					return $this->json_ok('success');
+				}
+				else 
+					return $this->json_ok('fail');
 				break;
 			default:
 				abort(404);
