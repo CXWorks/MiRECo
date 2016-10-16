@@ -6,7 +6,39 @@ function buttonset(){
       $telform = $('.telchoose'),
       $tellis = $('.telchoose>li'),
       $telbar = $('#telbar'),
-      $document = $('document');
+      $document = $('document'),
+      $registerIn = $('#registerIn');
+      //ajax 发送注册信息
+      $registerIn.on('click',function(){
+        var phone=$('#tel')[0].value;
+        var idname=$('#idname')[0].value;
+        var paswd=$('#paswd')[0].value;
+        var repaswd=$('#repaswd')[0].value;
+        //check password ok
+        if (paswd != repaswd) {
+          alert('前后密码不同');
+          return;
+        }
+        //check phone
+        //check username
+        //send
+        $.ajax({
+          //window.location.host
+          type: 'post',
+          url:'http://localhost/server/public/index.php/register',
+          data:{
+            "username":idname,
+            "phonenum":phone,
+            "email":"cxworks@qq.com",
+            "password":paswd
+          },
+          success:function (data,status) {
+
+          },
+          error: function (data) {
+          }
+        });
+      })
   $telnum.on('click',function(e){
     e = e || window.event;
     if(e.stopPropagation){
