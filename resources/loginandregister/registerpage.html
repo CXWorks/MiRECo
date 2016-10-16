@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>注册CREATIX，用热爱改变生活</title>
+	<link rel="stylesheet" type="text/css" href="css/page.css">
+    <link rel="stylesheet" href="css/registerCardStyle.css"/>
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+</head>
+<body>
+	<div id="nav">
+		<ul>
+			<li><a href="#">首页</a></li>
+			<li><a href="#">栏目</a></li>
+			<li><a href="#">栏目</a></li>
+			<li><a href="#">栏目</a></li>
+			<li><a href="#">栏目</a></li>
+		</ul>
+	</div>
+	<div class="circle"></div>
+  <div id="registerCard" class="registerCard">
+    <div id="registerTag">注册CREATIX，用热爱改变生活</div>
+    <div class="cardContent">
+      <div id="telnum" class="sign-input">
+        <div id="telbar" class="input01">中国大陆+86</div>
+        <ul id="telchoose" class="telchoose" style="display:none">
+          <li>中国大陆+86</li>
+          <li>香港+852</li>
+          <li>澳门+853</li>
+          <li>台湾+886</li>
+          <li>日本+81</li>
+          <li>韩国+82</li>
+          <li>美国+1</li>
+          <li>英国+44</li>
+          <li>俄罗斯+7</li>
+          <li>加拿大+1</li>
+          <li>法国+33</li>
+          <li>德国+49</li>
+          <li>西班牙+34</li>
+          <li>意大利+39</li>
+          <li>澳大利亚+61</li>
+          <li>新加坡+65</li>
+          <li>马来西亚+60</li>
+          <li>巴西+55</li>
+          <li>阿根廷+54</li>
+        </ul>
+      </div>
+      <div class="inputs">
+          <div class="sign-input"><input name="tel" id="tel" maxlength="11"  class="input01" tabindex="1" value="手机号" onFocus="if (value =='手机号'){value =''}" onBlur="if (value ==''){value='手机号';}"/></div>
+          <div class="sign-input"><input name="idname" id="idname"  class="input01" tabindex="2" value="用户名" onfocus="if(value =='用户名'){value =''}" onblur="if(value ==''){value='用户名';}"/></div>
+          <div class="sign-input"><input name="paswd" id="paswd" maxlength="16"  class="input01" tabindex="3" value="密码" onFocus="if (value =='密码'){value =''}" onBlur="if (value ==''){value='密码';}" /></div>
+          <div class="sign-input"><input name="repaswd" id="repaswd" maxlength="16" class="input01" tabindex="4" value="确认密码" onFocus="if (value =='确认密码'){value =''}" onBlur="if (value ==''){value='确认密码';}" /></div>
+      </div>
+      <div class="check-number">
+        <input name="chenum" id="chenum" maxlength="6" type="text" class="input02" value="验证码" tabindex="5" onfocus="if(value =='验证码'){value =''}" onblur="if(value==''){value='验证码'}"/>
+        <div name="chenum-time" id="chenum-time"><a href="#">点击发送</a></div>
+      </div>
+      <div class="registerIn">注册账号</div>
+  </div>
+  <a href="#" class="relog">返回登录</a>
+  <span class="paswrong">两次密码输入内容不一致</span>
+  <span class="paswdtip">密码最长16位</span>
+  </div>
+  <script src="js/buttonset.js"></script>
+</body>
+</html>
