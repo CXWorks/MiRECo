@@ -22,17 +22,17 @@ body{
 }
 
 #nav ul{
-	width: 80%;
+	width: 960px;
 	height: 50px;
 	position: absolute;
-	right: 0;
+	left: 50%;
+	margin-left: -480px;
 }
 
 #nav ul li{
-	width: 15%;
+	width: 160px;
 	height: 50px;
 	float:left;
-	margin-left: 1%;
 	list-style: none;
 	line-height: 50px;
 	text-align: center;
@@ -48,12 +48,4 @@ a{
 
 #nav ul li a:hover{color: #F43E4B; text-decoration: none;}
 
-.circle{
-	width: 50px;
-	height: 50px;
-	background: #F43E4B;
-	border-radius: 50%;
-	position: absolute;
-	left: 7.5%;
-	top: 1%;
-}
+#nav ul li img{position: relative; top: 10px;}

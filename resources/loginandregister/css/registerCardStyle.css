@@ -1,4 +1,4 @@
- *{margin:0;padding: 0}
+*{margin:0;padding: 0}
 .registerCard{
   width: 800px;
   height:600px;
@@ -8,6 +8,8 @@
   -webkit-border-radius: 10px;
   margin:7% auto;
   position: relative;
+  filter: alpha(opacity= 85);
+  opacity: 0.85;
 }
 #registerTag{
   font-family: "微软雅黑";
