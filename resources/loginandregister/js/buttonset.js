@@ -142,8 +142,6 @@ $repaswd.focusout(function(e){
     $paswrong.css('display','none');
   }
 });
-//验证码发送按钮点击开始倒计时设置
-
 //返回登陆按钮设置
 $relog.on({
   mouseover: function(e){$(this).css('color','#f43e4b')},
