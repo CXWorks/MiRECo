@@ -1,0 +1,78 @@
+*{margin: 0;padding: 0;font-family: "微软雅黑";}
+.maincontent{
+  position: relative;
+  width: 960px;
+  height: auto;
+  margin: 30px auto;
+  top: 40px;
+}
+.leftcontent{
+  width: 680px;
+  height: 100%;
+  float: left;
+}
+.rightcontent{
+  width: 250px;
+  height: 100%;
+  float: right;
+}
+.topscollimg{
+  width: 100%;
+  height:350px;
+  background-color: #fa8072;
+  line-height: 350px;
+  text-align: center;
+}
+.readbox{
+  width: 100%;
+  height: 280px;
+  background-color: #fff;
+  margin-top: 10px;
+}
+.selfcontent{
+  width: 100%;
+  height: auto;
+}
+.selfie{
+  width: 100%;
+  height: 250px;
+  background-color: #000;
+  color: #fff;
+  line-height: 250px;
+  text-align: center;
+}
+.selfindex{
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.selfindex li{
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  list-style: none;
+}
+.selfindex li a{
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+.selfindex li a:hover{
+  color: #f43e4b;
+}
+.qacontent{
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+.qa{
+  width: 100%;
+  height: 280px;
+  margin-top: 10px;
+  background-color: #fff;
+  color: #000;
+  line-height: 280px;
+  text-align: center;
+}
