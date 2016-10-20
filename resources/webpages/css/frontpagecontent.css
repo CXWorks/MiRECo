@@ -16,12 +16,48 @@
   float: right;
   position: relative;
 }
-.topscollimg{
+.topscroll{
   width: 100%;
   height:350px;
-  background-color: #fa8072;
-  line-height: 350px;
-  text-align: center;
+  position: relative;
+}
+.scrolltag{
+  width: 96px;
+  height: 5px;
+  overflow: hidden;
+  z-index: 99;
+  position: absolute;
+  margin-top: 335px;
+  left: 292px;
+}
+.scrolltag li{
+  width: 17px;
+  height: 5px;
+  float: left;
+  list-style-type: none;
+  background-color: #fff;
+  margin-right: 7px;
+  cursor: pointer;
+}
+.topscroll a{
+  position: absolute;
+  display: none;
+}
+.topscroll a img{
+  width: 680px;
+  height: 350px;
+}
+.topscroll a h2{
+  width: 66%;
+  height: auto;
+  margin-left: 30px;
+  bottom: 50px;
+  z-index: 99;
+  position: absolute;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  padding-left: 15px;
 }
 .readbox{
   width: 100%;
