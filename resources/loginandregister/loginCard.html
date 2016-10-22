@@ -64,9 +64,29 @@
           <div class="sign-input"><input name="tel" id="tel" maxlength="11"  class="input01" tabindex="1" value="手机号" onFocus="if (value =='手机号'){value =''}" onBlur="if (value ==''){value='手机号';}"/></div>
           <div class="sign-input"><input name="paswd" id="paswd" maxlength="16"  class="input01" tabindex="3" value="密码" onFocus="if (value =='密码'){value =''}" onBlur="if (value ==''){value='密码';}" /></div>
       </div>
-      <div class="logInbtn">登录</div><div class="registerIn">注册</div>
+      <div class="logInbtn" id="login">登录</div><div class="registerIn">注册</div>
   </div>
   </div>
   <script src="js/buttonset.js"></script>
+	<script >
+			function login() {
+				$.ajax({
+					type:'post',
+					url:'../../server/public/index.php/login/phone',
+					data:{
+						'phonenum':$('#tel')[0].value,
+						'password':$('#paswd')[0].value
+					},
+					success:function (data,status) {
+						if (data['msg']=='success') {
+							window.location.href='../webpages/frontpage.html';
+						}else {
+							alert('error');
+						}
+					}
+				});
+			}
+			$('#login').on('click',login);
+	</script>
 </body>
 </html>

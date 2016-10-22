@@ -1,5 +1,9 @@
 window.onload=buttonset;
+
+
+
 function buttonset(){
+
 
   //选项卡选取国家区号特效设置
   var $telnum = $('#telnum'),
@@ -8,6 +12,7 @@ function buttonset(){
       $telbar = $('#telbar'),
       $document = $('document'),
       $registerIn = $('#registerIn');
+      
       //ajax 发送注册信息
       $registerIn.on('click',function(){
         var phone=$('#tel')[0].value;
@@ -25,14 +30,17 @@ function buttonset(){
         $.ajax({
           //window.location.host
           type: 'post',
-          url:'http://localhost/server/public/index.php/register',
+          url:'../../server/public/index.php/register',
           data:{
             "username":idname,
             "phonenum":phone,
-            "email":"cxworks@qq.com",
+            "email":"mireco@example.com",
             "password":paswd
           },
           success:function (data,status) {
+            if (data['msg']=='success') {
+              window.location.href='../webpages/frontpage.html';
+            }
 
           },
           error: function (data) {
