@@ -1,0 +1,67 @@
+*{margin: 0px;padding: 0px;font-family: "微软雅黑"}
+
+.myhome{
+  width: 1200px;
+  height: auto;
+  margin: 130px auto;
+}
+.selcard{
+  width: 902px;
+  height: 200px;
+  background-color: #fff;
+  float: right;
+}
+.selcard div{
+  width: 300px;
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  font-size: 25px;
+  float: left;
+  cursor: pointer;
+}
+.selcard div:hover{
+  background-color: #fa8072;
+  color: #fff;
+}
+.myfollow,.myfans{
+  border-right: 1px solid #ccc;
+}
+.mydata{
+  width: 280px;
+  height: auto;;
+  background-color: #fff;
+  float: left;
+}
+.author{
+  width: 280px;
+  height: 100px;
+  cursor: pointer;
+}
+.author:hover{background-color: #ccc}
+.authorimage{
+  width: 50px;
+  height: 50px;
+  background-color: #ddd;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 25px;
+  float: left;
+}
+.authorname{
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  overflow: hidden;
+}
+.myexhibition{
+  width: 280px;
+  height: 100px;
+  background-color: #f43e4b;
+  line-height: 100px;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+.myexhibition:hover{background-color: #fa8072;}
