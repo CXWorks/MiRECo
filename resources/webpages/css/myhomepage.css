@@ -31,14 +31,15 @@ html{
 }
 .mydata{
   width: 280px;
-  height: auto;;
-  background-color: #fff;
+  height: auto;
   float: left;
+  margin-top: -200px;
 }
 .author{
   width: 280px;
   height: 100px;
   cursor: pointer;
+  background-color: #fff;
 }
 .author:hover{background-color: #ccc}
 .authorimage{
@@ -67,3 +68,105 @@ html{
   cursor: pointer;
 }
 .myexhibition:hover{background-color: #fa8072;}
+.mymission{
+  width: 280px;
+  height: auto;
+  background-color: #fff;
+  margin-top: 30px;
+}
+.missionsbar{
+  width: 280px;
+  height: 60px;
+}
+.missionsbar div{
+  width: 139px;
+  height: 59px;
+  line-height: 60px;
+  text-align: center;
+  float: left;
+  cursor: pointer;
+  border-bottom: 1px #ccc solid;
+}
+#mymissionsbar{
+  border-right: 1px #ccc solid;
+}
+.missionsbar div:hover{
+  background-color: #fa8072;
+  color: #fff;
+}
+.missionsbox{
+  width: 280px;
+  height: auto;
+  margin-top: 10px;
+  overflow: hidden;
+}
+.missionimg{
+  width: 280px;
+  height: 200px;
+  text-align: center;
+  line-height: 200px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.missiontittle{
+  width: 250px;
+  height: 80px;
+  font-size: 20px;
+  margin: 15px;
+}
+.myarticle{
+  width: 902px;
+  height: auto;
+  float: right;
+}
+.readbox{
+  width: 100%;
+  height: 380px;
+  background-color: #fff;
+  margin-top: 10px;
+  position: relative;
+}
+.titimageB img{
+  width: 100%;
+  height:380px;
+  overflow: hidden;
+  z-index: -1;
+}
+.titleB{
+  width: 66%;
+  height: auto;
+  margin-left: 30px;
+  bottom: 30px;
+  z-index: 99;
+  position: absolute;
+  cursor: pointer;
+}
+.titleB h2{
+  color: #fff;
+  background-color: #000;
+  padding-left: 15px;
+}
+.titleimageS img{
+  width: 45%;
+  height: 380px;
+  overflow: hidden;
+  float: right;
+}
+.titleS{
+  width: 40%;
+  height: auto;
+  margin-left: 30px;
+  top: 30px;
+  position: absolute;
+  cursor: pointer;
+}
+.boxtips{
+  width: 150px;
+  margin-left: 30px;
+  bottom: 20px;
+  position: absolute;
+}
+.titletips{
+  float: left;
+  margin-right: 30px;
+}

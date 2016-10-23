@@ -5,7 +5,7 @@ html{
 .content{
   width: 1100px;
   height: auto;
-  margin: 70px auto;
+  margin: 100px auto;
   background-color: #fff;
   position: relative;
 }
@@ -103,7 +103,7 @@ html{
   padding: 3px;
   color: #ccc;
   margin: 0 auto;
-  overflow: hidden;
+  overflow: visible;
 }
 .submitcom{
   width: 80px;
