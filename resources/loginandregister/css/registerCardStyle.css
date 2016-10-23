@@ -108,6 +108,11 @@
   font-size: 20px;
   cursor: pointer;
 }
+.registerIn a{
+  text-decoration: none;
+  color: #f43e4b;
+  display: block;
+}
 .relog{
   margin-right: 30px;
   margin-bottom: 50px;
