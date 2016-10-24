@@ -7,6 +7,10 @@ html{
 
 body{
 	width: 100%;
+	background-image: url(bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: local;
 	background-color: #EDEDED;
 }
 
