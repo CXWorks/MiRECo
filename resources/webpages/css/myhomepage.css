@@ -6,6 +6,7 @@ html{
   width: 1200px;
   height: auto;
   margin: 130px auto;
+  position: relative;
 }
 .selcard{
   width: 902px;
@@ -33,7 +34,8 @@ html{
   width: 280px;
   height: auto;
   float: left;
-  margin-top: -200px;
+  top: 0px;
+  position: absolute;
 }
 .author{
   width: 280px;
@@ -139,7 +141,22 @@ html{
 .myarticle{
   width: 902px;
   height: auto;
-  float: right;
+  top: 200px;
+  right: 0px;
+  position: absolute;
+  display: none;
+}
+.followsarticle{
+  font-size: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: #fff;
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  padding-left: 20px;
+  margin-bottom: -10px;
 }
 .readbox{
   width: 100%;
@@ -191,4 +208,86 @@ html{
 .titletips{
   float: left;
   margin-right: 30px;
+}
+.myfollowpeople{
+  width: 903px;
+  height: auto;
+  top: 220px;
+  right: 0px;
+  position: absolute;
+  overflow-x: hidden;
+  display: none;
+}
+.myfanspeople{
+  width: 903px;
+  height: auto;
+  top: 220px;
+  right: 0px;
+  position: absolute;
+  overflow-x: hidden;
+  display: none;
+}
+.myrelationship{
+  width: 903px;
+  height: auto;
+  top: 220px;
+  right: 0px;
+  position: absolute;
+  overflow-x: hidden;
+}
+.refollowsarticle{
+  font-size: 30px;
+  cursor: pointer;
+  background-color: #fff;
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+.peoplebox{
+  width: 300px;
+  height: 350px;
+  background-color: #fff;
+  border-right: 1px #ededed solid;
+  border-bottom: 1px #ededed solid;
+  float: left;
+  cursor: pointer;
+}
+.teambox{
+  width: 902px;
+  height: 280px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
+}
+.teamimg{
+  width: 280px;
+  height: 280px;
+  background-color: #000;
+  color: #fff;
+  line-height: 280px;
+  position: absolute;
+}
+.teamid{
+  margin-left: 320px;
+  padding-top: 20px;
+  font-size: 30px;
+  position: absolute;
+}
+.teammembers{
+  margin-left: 320px;
+  padding-top: 80px;
+  font-size: 20px;
+  color: #999;
+  position: absolute;
+}
+.teaminfo{
+  margin-left: 320px;
+  padding-top: 130px;
+  font-size: 25px;
+  color: #555;
+  position: absolute;
 }
