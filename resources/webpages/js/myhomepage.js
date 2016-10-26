@@ -13,6 +13,8 @@ function buttonsset(){
 //选项卡切换效果
   $myfollow.on('click',function(){
     $myfollow.css('background-color','#fa8072');
+    $myfans.css({'background-color':'#fff','color':'#000'});
+    $myteam.css({'background-color':'#fff','color':'#000'});
     $myfollow.css('color','#fff');
     $myarticle.css('display','none');
     $myrelationship.css('display','none');
@@ -21,6 +23,8 @@ function buttonsset(){
   });
   $myfans.on('click',function(){
     $myfans.css('background-color','#fa8072');
+    $myfollow.css({'background-color':'#fff','color':'#000'});
+    $myteam.css({'background-color':'#fff','color':'#000'});
     $myfans.css('color','#fff');
     $myarticle.css('display','none');
     $myrelationship.css('display','none');
@@ -29,10 +33,21 @@ function buttonsset(){
   });
   $myteam.on('click',function(){
     $myteam.css('background-color','#fa8072');
+    $myfans.css({'background-color':'#fff','color':'#000'});
+    $myfollow.css({'background-color':'#fff','color':'#000'});
     $myteam.css('color','#fff');
     $myarticle.css('display','none');
     $myfanspeople.css('display','none');
     $myfollowpeople.css('display','none');
     $myrelationship.fadeIn();
+  });
+  $refollowsarticle.on('click',function(){
+    $myteam.css({'background-color':'#fff','color':'#000'});
+    $myfans.css({'background-color':'#fff','color':'#000'});
+    $myfollow.css({'background-color':'#fff','color':'#000'});
+    $myrelationship.css('display','none');
+    $myfanspeople.css('display','none');
+    $myfollowpeople.css('display','none');
+    $myarticle.fadeIn();
   });
 }

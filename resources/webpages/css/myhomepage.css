@@ -24,8 +24,7 @@ html{
   cursor: pointer;
 }
 .selcard div:hover{
-  background-color: #fa8072;
-  color: #fff;
+  color: #fa8072;
 }
 .myfollow,.myfans{
   border-right: 1px solid #ccc;
@@ -144,7 +143,6 @@ html{
   top: 200px;
   right: 0px;
   position: absolute;
-  display: none;
 }
 .followsarticle{
   font-size: 30px;
@@ -234,6 +232,7 @@ html{
   right: 0px;
   position: absolute;
   overflow-x: hidden;
+  display: none;
 }
 .refollowsarticle{
   font-size: 30px;
