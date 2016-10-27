@@ -96,6 +96,19 @@ html{
 .articleset div:hover{
   background-color: #fa8072;
   color: #fff;
+  border-right: 1px #fa8072 solid;
+}
+.newmission{
+  width: 280px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border-bottom: 1px #ccc solid;
+  cursor: pointer;
+}
+.newmission:hover{
+  background-color: #f43e4b;
+  color: #fff;
 }
 .missionsbar{
   width: 280px;
@@ -116,6 +129,7 @@ html{
 .missionsbar div:hover{
   background-color: #fa8072;
   color: #fff;
+  border-right: 1px #fa8072 solid;
 }
 .missionsbox{
   width: 280px;
