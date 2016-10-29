@@ -19,3 +19,5 @@ $app->get('/', function () use ($app) {
 $app->get('/checkuser', 'UserController@checkUsername');
 $app->post('/register', 'UserController@register');
 $app->post('/login/{method}', 'UserController@login');
+$app->post("/concentrate", 'ConcentrateController@doconcentrate');
+$app->get('/concentrate', 'ConcentrateController@getConcentrate');
