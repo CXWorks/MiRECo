@@ -41,6 +41,7 @@ html{
   height: 100px;
   cursor: pointer;
   background-color: #fff;
+  position: relative;
 }
 .author:hover{background-color: #ccc}
 .authorimage{
@@ -51,12 +52,27 @@ html{
   margin-right: 25px;
   margin-top: 25px;
   float: left;
+  position: absolute;
 }
 .authorname{
   width: 100px;
   height: 100px;
   line-height: 100px;
+  left: 85px;
   overflow: hidden;
+  position: absolute;
+}
+.fobtn{
+  width: 50px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  color: #fff;
+  background-color: #fa8072;
+  float: right;
+  top:32px;
+  right: 20px;
+  position: absolute;
 }
 .myexhibition{
   width: 280px;

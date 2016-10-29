@@ -1,0 +1,13 @@
+*{margin: 0;padding: 0;font-size: "微软雅黑"}
+.main{
+  width: 960px;
+  height: 3000px;
+  margin: 80px auto;
+}
+.artistbox{
+  width: 220px;
+  height: 300px;
+  margin: 10px;
+  background-color: #fff;
+  float: left;
+}

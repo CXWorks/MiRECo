@@ -87,6 +87,7 @@
 					},
 					success:function (data,status) {
 						if (data['msg']=='success') {
+							localStorage.phonenum = $('#tel')[0].value;
 							window.location.href='../webpages/frontpage.html';
 						}else {
 							alert('error');

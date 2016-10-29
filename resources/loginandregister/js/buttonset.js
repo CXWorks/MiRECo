@@ -12,7 +12,7 @@ function buttonset(){
       $telbar = $('#telbar'),
       $document = $('document'),
       $registerIn = $('#registerIn');
-      
+
       //ajax 发送注册信息
       $registerIn.on('click',function(){
         var phone=$('#tel')[0].value;

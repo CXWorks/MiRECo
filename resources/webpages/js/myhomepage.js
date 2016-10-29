@@ -1,3 +1,14 @@
+function getQueryVariable(variable)
+{
+     var query = window.location.search.substring(1);
+     var vars = query.split("&");
+     for (var i=0;i<vars.length;i++) {
+             var pair = vars[i].split("=");
+             if(pair[0] == variable){return pair[1];}
+     }
+     return ;
+}
+var id = getQueryVariable('user');
 $(window).on('load',function(){
   buttonsset();
 });
@@ -49,5 +60,20 @@ function buttonsset(){
     $myfanspeople.css('display','none');
     $myfollowpeople.css('display','none');
     $myarticle.fadeIn();
+  });
+//关注按钮点击滑动操作
+  var $fobtn = $('.fobtn');
+  if(id!=localStorage.phonenum){
+    $fobtn.css('display','block');
+  }else {
+    $fobtn.css('display','none');
+  }
+  $fobtn.on('click',function(e){
+    e = e || window.event;
+    if(e.stopPropagation){
+         e.stopPropagation();
+    }else{
+         e.cancelBubble=true;
+    }
   });
 }
