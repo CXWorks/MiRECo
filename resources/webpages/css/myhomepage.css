@@ -23,9 +23,6 @@ html{
   float: left;
   cursor: pointer;
 }
-.selcard div:hover{
-  color: #fa8072;
-}
 .myfollow,.myfans{
   border-right: 1px solid #ccc;
 }

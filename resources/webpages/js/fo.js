@@ -8,6 +8,7 @@ function getQueryVariable(variable)
      }
      return ;
 }
+var id = getQueryVariable('user');
 $(window).on('load',function(){
   $('.hisarticle').css({
     'background-color':'#fa8072',
