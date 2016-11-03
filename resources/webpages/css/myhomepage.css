@@ -163,7 +163,9 @@ html{
   position: absolute;
 }
 .followsarticle{
-  font-size: 30px;
+  font-size: 20px;
+  word-spacing: 5px;
+  letter-spacing: 5px;
   margin-top: 20px;
   cursor: pointer;
   background-color: #fff;
@@ -253,7 +255,9 @@ html{
   display: none;
 }
 .refollowsarticle{
-  font-size: 30px;
+  font-size: 20px;
+  word-spacing: 5px;
+  letter-spacing: 5px;
   cursor: pointer;
   background-color: #fff;
   display: block;
