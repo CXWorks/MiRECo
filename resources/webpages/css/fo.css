@@ -26,10 +26,10 @@ html{
 .selcard div:hover{
   color: #fa8072;
 }
-.myfollow,.myfans{
+.hisfollow,.hisfans{
   border-right: 1px solid #ccc;
 }
-.mydata{
+.hisdata{
   width: 280px;
   height: auto;
   float: left;
@@ -39,13 +39,10 @@ html{
 .author{
   width: 280px;
   height: 100px;
-  cursor: pointer;
   background-color: #fff;
   color: #000;
   position: relative;
 }
-.author:hover{background-color: #ccc}
-
 .authorimage{
   width: 50px;
   height: 50px;
@@ -64,6 +61,19 @@ html{
   overflow: hidden;
   position: absolute;
 }
+.fobtn{
+  width: 50px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  color: #fff;
+  background-color: #fa8072;
+  float: right;
+  top:32px;
+  right: 20px;
+  position: absolute;
+  cursor: pointer;
+}
 .myexhibition{
   width: 280px;
   height: 100px;
@@ -75,68 +85,19 @@ html{
   cursor: pointer;
 }
 .myexhibition:hover{background-color: #fa8072;}
-.mymission{
+.hismission{
   width: 280px;
   height: auto;
   background-color: #fff;
-  margin-top: 70px;
+  margin-top: 40px;
 }
-.articleset{
-  width: 280px;
-  height: 60px;
-  float: left;
-  background-color: #fff;
-}
-.articleset a{
-  display: block;
-  width: 139px;
-  height: 59px;
-  line-height: 60px;
-  text-align: center;
-  float: left;
-  cursor: pointer;
-  border-bottom: 1px #ccc solid;
-}
-.editnew{
-  border-right: 1px #ccc solid;
-}
-.articleset a:hover{
-  background-color: #fa8072;
-  color: #fff;
-  border-right: 1px #fa8072 solid;
-}
-.newmission{
+#missionsbar{
   width: 280px;
   height: 60px;
   line-height: 60px;
   text-align: center;
   border-bottom: 1px #ccc solid;
   cursor: pointer;
-}
-.newmission:hover{
-  background-color: #f43e4b;
-  color: #fff;
-}
-.missionsbar{
-  width: 280px;
-  height: 60px;
-}
-.missionsbar div{
-  width: 139px;
-  height: 59px;
-  line-height: 60px;
-  text-align: center;
-  float: left;
-  cursor: pointer;
-  border-bottom: 1px #ccc solid;
-}
-#mymissionsbar{
-  border-right: 1px #ccc solid;
-}
-.missionsbar div:hover{
-  background-color: #fa8072;
-  color: #fff;
-  border-right: 1px #fa8072 solid;
 }
 .missionsbox{
   width: 280px;
@@ -158,24 +119,12 @@ html{
   font-size: 20px;
   margin: 15px;
 }
-.myarticle{
+.articles{
   width: 902px;
   height: auto;
-  top: 200px;
+  top: 230px;
   right: 0px;
   position: absolute;
-}
-.followsarticle{
-  font-size: 30px;
-  margin-top: 20px;
-  cursor: pointer;
-  background-color: #fff;
-  display: block;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  padding-left: 20px;
-  margin-bottom: -10px;
 }
 .readbox{
   width: 100%;
@@ -228,43 +177,23 @@ html{
   float: left;
   margin-right: 30px;
 }
-.myfollowpeople{
+.followpeople{
   width: 903px;
   height: auto;
-  top: 220px;
+  top: 240px;
   right: 0px;
   position: absolute;
   overflow-x: hidden;
   display: none;
 }
-.myfanspeople{
+.fanspeople{
   width: 903px;
   height: auto;
-  top: 220px;
+  top: 240px;
   right: 0px;
   position: absolute;
   overflow-x: hidden;
   display: none;
-}
-.myrelationship{
-  width: 903px;
-  height: auto;
-  top: 220px;
-  right: 0px;
-  position: absolute;
-  overflow-x: hidden;
-  display: none;
-}
-.refollowsarticle{
-  font-size: 30px;
-  cursor: pointer;
-  background-color: #fff;
-  display: block;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  padding-left: 20px;
-  margin-bottom: 10px;
 }
 .peoplebox{
   width: 300px;
@@ -274,40 +203,4 @@ html{
   border-bottom: 1px #ededed solid;
   float: left;
   cursor: pointer;
-}
-.teambox{
-  width: 902px;
-  height: 280px;
-  background-color: #fff;
-  margin-bottom: 20px;
-  position: relative;
-  cursor: pointer;
-}
-.teamimg{
-  width: 280px;
-  height: 280px;
-  background-color: #000;
-  color: #fff;
-  line-height: 280px;
-  position: absolute;
-}
-.teamid{
-  margin-left: 320px;
-  padding-top: 20px;
-  font-size: 30px;
-  position: absolute;
-}
-.teammembers{
-  margin-left: 320px;
-  padding-top: 80px;
-  font-size: 20px;
-  color: #999;
-  position: absolute;
-}
-.teaminfo{
-  margin-left: 320px;
-  padding-top: 130px;
-  font-size: 25px;
-  color: #555;
-  position: absolute;
 }

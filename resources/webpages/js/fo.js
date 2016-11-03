@@ -8,30 +8,23 @@ function getQueryVariable(variable)
      }
      return ;
 }
-var id = getQueryVariable('user');
 $(window).on('load',function(){
-  buttonsset();
+  $('.hisarticle').css({
+    'background-color':'#fa8072',
+    'color':'#fff'
+  });
+  foset();
 });
-function infoopen(){
-  window.open('myinfo.html');
-}
-function buttonsset(){
+//页面选项卡设置
+function foset(){
   var $selcard = $('.selcard>div'),
-      $content = $('.wrap>div'),
-      $myarticle = $('.myarticle'),
-      $myfollowpeople = $('.myfollowpeople'),
-      $myfanspeople = $('.myfanspeople'),
-      $myrelationship = $('.myrelationship'),
-      $refollowsarticle = $('.refollowsarticle'),
-      $author = $('.author');
+      $content = $('.wrap>div');
 
-//选项卡切换效果
   $selcard.on('click',function(){
     $selcard.css({
       'background-color':'#fff',
       'color':'#000'
     });
-    $myarticle.css('display','none');
     $(this).css({
       'background-color':'#fa8072',
       'color':'#fff'
@@ -39,9 +32,19 @@ function buttonsset(){
     $content.css('display','none');
     $content.eq($(this).index()).fadeIn();
   });
-  $refollowsarticle.on('click',function(){
-    $selcard.css({'background-color':'#fff','color':'#000'});
-    $content.css('display','none');
-    $myarticle.fadeIn();
+//关注设置
+  var $fobtn = $('.fobtn');
+  if(id!=localStorage.phonenum){
+    $fobtn.css('display','block');
+  }else {
+    $fobtn.css('display','none');
+  }
+  $fobtn.on('click',function(e){
+    e = e || window.event;
+    if(e.stopPropagation){
+         e.stopPropagation();
+    }else{
+         e.cancelBubble=true;
+    }
   });
 }
