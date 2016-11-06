@@ -21,3 +21,5 @@ $app->post('/register', 'UserController@register');
 $app->post('/login/{method}', 'UserController@login');
 $app->post("/concentrate", 'ConcentrateController@doconcentrate');
 $app->get('/concentrate', 'ConcentrateController@getConcentrate');
+$app->post('/userinfo', 'UserinfoController@douserinfo');
+$app->get('/userinfo', 'UserinfoController@getuserinfo');
