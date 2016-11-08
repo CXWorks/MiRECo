@@ -13,6 +13,7 @@ html{
   height: 200px;
   background-color: #fff;
   float: right;
+  overflow: hidden;
 }
 .selcard div{
   width: 300px;
