@@ -1,7 +1,10 @@
 *{margin: 0px;padding: 0px;font-family: "微软雅黑"}
 html{
   width: 100%;
-  overflow: auto;
+<<<<<<< HEAD
+=======
+  overflow-x: auto;
+>>>>>>> 5c3b7e8a42cd4390427a1267355639b07974cd59
 }
 .myhome{
   width: 1200px;
