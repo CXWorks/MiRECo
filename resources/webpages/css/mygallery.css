@@ -1,7 +1,11 @@
 *{margin: 0;padding: 0;}
 body{
 	width: 100%;
-	background-color: #000080;
+}
+.mainwrap{
+	width: 100%;
+	height: 100%;
+	z-index: 1;
 }
 @font-face {
   font-family: newcicle;
@@ -9,7 +13,7 @@ body{
 }
 .navwrap{
 	width: 90%;
-	height: 700px;
+	height: 750px;
 	background-color: #ededed;
 	margin: 4% auto;
 }
@@ -20,9 +24,8 @@ body{
 .backhome{
   width: 20px;
   height: 20px;
-  background-color: #ededed;
-  border-bottom: 2px #333 solid;
-  border-left: 2px #333 solid;
+  border-bottom: 2px #202020 solid;
+  border-left: 2px #202020 solid;
   float: left;
   margin-left: 5%;
   margin-top: 35px;
@@ -43,6 +46,7 @@ body{
   float: right;
   margin-right: 7%;
   cursor: pointer;
+	color: #202020;
 }
 .entag{
   font-family: newcicle;
@@ -55,19 +59,20 @@ body{
 .hosttip{
   width: 960px;
   height: 260px;
-  margin: 100px auto;
+  margin: 9% auto;
 }
 .hostinfo{
   display: inline-block;
   float: left;
   width: 50%;
   height: 100%;
-  border-right: 2px #000 solid;
+  border-right: 2px #202020 solid;
 }
 .wrapinfo{
   float: right;
   margin-right: 40px;
   margin-top: 50px;
+	color: #202020;
 }
 .hostname{
   font-family: "宋体";
@@ -82,19 +87,32 @@ body{
   float: right;
 }
 #scontent{
-	padding: 10%;
-	margin-top: -65;
+	width: 90%;
+	padding: 5%;
+	background-color: #ededed;
 }
 .thbx{
-	height: 500px;
-	padding: 5px;
 	text-align: center;
 	text-decoration: none;
-	margin-bottom: 5%;
+	padding: 3%;
+	overflow: hidden;
+}
+.bxx{
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
 	overflow: hidden;
 }
 .thbx:hover{
 	text-decoration: none;
+}
+.infowrap{
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity:1;
+	filter:alpha(opacity=100);
+	z-index: 999;
 }
 .col-md-4 h3{
 	margin-top: 40px;
@@ -103,14 +121,14 @@ body{
 	font-family: "微软雅黑";
 }
 .imgbx{
-	width: 90%;
-	height: 65%;
-	margin-left: 5%;
-	background-color: #ededed;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	z-index: 0;
 }
 .infobx{
 	color: #555;
 	font-family: "宋体";
 	font-size: 15px;
-	padding: 15px;
+	padding: 30px;
 }
