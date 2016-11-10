@@ -1,33 +1,20 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="css/pagetag.css">
+	<link rel="stylesheet" type="text/css" href="css/page.css">
 	<link rel="stylesheet" type="text/css" href="css/articlepage.css">
 </head>
+
 <body>
-	<div id="nav">
-		<ul id="item">
-			<li><a href="#"><img src="fakeLogo.png" alt="CREATIX"></a></li>
-			<li><a href="#">首页</a></li>
-			<li><a href="#">栏目</a></li>
-			<li><a href="#">栏目</a></li>
-			<li><a href="#">栏目</a></li>
-			<li><a href="#">栏目</a></li>
-		</ul>
-		<form class="search_fm">
-			<input type="text" placeholder="Search" required>
-			<button type="submit"><img src="sb20.png"></button>
-		</form>
-		<ul id="lognreg">
-			<li><a id="log" href="#">登录</a></li>
-			<li><a id="reg" href="#">注册</a></li>
-		</ul>
+	<div class="navframe">
+		<iframe frameborder="0" scrolling="no" width="100%" height="70px" src="navigationBar.html"></iframe>
 	</div>
 	<div class="content">
-		<div class="titleimg"><img src="images/0.jpg"/></div>
+		<div class="titleimg"><img src="images/0.jpg" /></div>
 		<div class="articletitle">
 			<div class="articletips">音乐</div>
 			<div class="titlename">不想办茶馆的脱口秀主持不是好的音乐人|原创人说</div>
@@ -39,9 +26,12 @@
 			</div>
 		</div>
 		<div class="comqa">
-			<div class="comqasel"><div class="comqacard" id="comcard">12条评论</div><div class="comqacard" id="qacard">4条问答</div></div>
+			<div class="comqasel">
+				<div class="comqacard" id="comcard">12条评论</div>
+				<div class="comqacard" id="qacard">4条问答</div>
+			</div>
 			<div class="comment" id="comment">
-				<input class="comqainput" id="cominput" value="我有建议" onFocus="if (value =='我有建议'){value =''}" onBlur="if (value ==''){value='我有建议';}"/>
+				<input class="comqainput" id="cominput" value="我有建议" onFocus="if (value =='我有建议'){value =''}" onBlur="if (value ==''){value='我有建议';}" />
 				<div class="submitcom">评论</div>
 				<div class="commentbox"></div>
 			</div>
@@ -51,4 +41,5 @@
 		</div>
 	</div>
 </body>
+
 </html>
