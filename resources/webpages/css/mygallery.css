@@ -1,7 +1,7 @@
 *{margin: 0;padding: 0;}
 body{
 	width: 100%;
-	background-color: #fff;
+	background-color: #000080;
 }
 @font-face {
   font-family: newcicle;
@@ -83,7 +83,7 @@ body{
 }
 #scontent{
 	padding: 10%;
-	margin-top: -7%;
+	margin-top: -65;
 }
 .thbx{
 	height: 500px;
@@ -96,7 +96,7 @@ body{
 .thbx:hover{
 	text-decoration: none;
 }
-.col-md-3 h3{
+.col-md-4 h3{
 	margin-top: 40px;
 	margin-bottom: 20px;
 	color: #555;
@@ -104,7 +104,7 @@ body{
 }
 .imgbx{
 	width: 90%;
-	height: 320px;
+	height: 65%;
 	margin-left: 5%;
 	background-color: #ededed;
 }
