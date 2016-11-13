@@ -1,70 +1,83 @@
-*{padding:0; margin:0;}
-
-
-body{
-	width: 100%;
-	background-color: #EDEDED;
+* {
+    padding: 0;
+    margin: 0;
 }
 
-#nav{
-	width:100%;
-	height: 60px;
-	background: #000;
-	top: 0px;
-	position: fixed;
-	z-index: 999;
+body {
+    width: 100%;
+    background-color: #EDEDED;
 }
 
-#nav ul#item{
-	width: 960px;
-	height: 60px;
-	position: absolute;
-	left: 50%;
-	margin-left: -480px;
+#nav {
+    width: 100%;
+    height: 60px;
+    background: #000;
+    top: 0px;
+    position: fixed;
+    z-index: 999;
 }
 
-#nav ul#item li{
-	width: 100px;
-	height: 60px;
-	float:left;
-	list-style: none;
-	line-height: 60px;
-	text-align: center;
-}
-
-#nav ul#item li a{
-	font-size: 15px;
-	font-family: "Microsoft YaHei";
-	font-weight: bold;
-}
-
-#nav ul#item li a{display: block; color: #FFF; text-decoration: none;}
-
-#nav ul#item li a:hover{color: #F43E4B; text-decoration: none;}
-
-#nav ul#item li img{position: relative; top: 10px; left: 10px;}
-
-.search_fm{
-	position: absolute;
+#nav ul#item {
+    width: 960px;
+    height: 60px;
+    position: absolute;
     left: 50%;
-    margin-left:155px;
+    margin-left: -480px;
+}
+
+#nav ul#item li {
+    width: 100px;
+    height: 60px;
+    float: left;
+    list-style: none;
+    line-height: 60px;
+    text-align: center;
+}
+
+#nav ul#item li a {
+    font-size: 15px;
+    font-family: "Microsoft YaHei";
+    font-weight: bold;
+}
+
+#nav ul#item li a {
+    display: block;
+    color: #FFF;
+    text-decoration: none;
+}
+
+#nav ul#item li a:hover {
+    color: #F43E4B;
+    text-decoration: none;
+}
+
+#nav ul#item li img {
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+.search_fm {
+    position: absolute;
+    left: 50%;
+    margin-left: 155px;
     top: 15px;
     float: left;
 }
 
-.search_fm input{
+.search_fm input {
     width: 128px;
     height: 30px;
     border: none;
-	position: relative;
-	top: -3px;
-	text-decoration: none;
+    position: relative;
+    top: -3px;
+    text-decoration: none;
     padding-left: 8px;
     padding-right: 8px;
     font-family: "Microsoft YaHei";
 }
 
-.search_fm button{
+.search_fm button {
     background: #F43E4B;
     width: 32px;
     height: 30px;
@@ -73,36 +86,43 @@ body{
     border: none;
 }
 
-.search_fm button:hover{background: #FA8072; text-decoration: none;}
-
-#nav ul#lognreg{
-	width: 120px;
-	height: 60px;
-	position: absolute;
-	left: 50%;
-	margin-left: 360px;
+.search_fm button:hover {
+    background: #FA8072;
+    text-decoration: none;
 }
 
-#nav ul#lognreg li{
-	width: 60px;
-	height: 60px;
-	float: left;
-	list-style: none;
-	line-height: 60px;
-	text-align: center;
+#nav ul#lognreg {
+    width: 120px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    margin-left: 360px;
 }
 
-#nav ul#lognreg li a{
-	font-size: 12px;
-	font-family: "Microsoft YaHei";
-	text-decoration: none;
-	color: #F43E4B;
-	border: 1px solid;
-	border-color: #F43E4B;
-	border-radius: 50px;
-	padding: 8px;
-	padding-top: 11px;
-	padding-bottom: 11px;
+#nav ul#lognreg li {
+    width: 60px;
+    height: 60px;
+    float: left;
+    list-style: none;
+    line-height: 60px;
+    text-align: center;
 }
 
-#nav ul#lognreg li a:hover{color: #FFF; text-decoration: none; background: #F43E4B;}
+#nav ul#lognreg li a {
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+    text-decoration: none;
+    color: #F43E4B;
+    border: 1px solid;
+    border-color: #F43E4B;
+    border-radius: 50px;
+    padding: 8px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+
+#nav ul#lognreg li a:hover {
+    color: #FFF;
+    text-decoration: none;
+    background: #F43E4B;
+}

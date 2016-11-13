@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>创作新的文章</title>
+	<link rel="stylesheet" type="text/css" href="css/page.css">
+	<link rel="stylesheet" type="text/css" href="dist/css/wangEditor.min.css">
+	<link rel="stylesheet" type="text/css" href="css/board.css">
+	<script type="text/javascript" src="dist/js/lib/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="dist/js/wangEditor.min.js"></script>
+</head>
+
+<body>
+	<div class="navframe">
+		<iframe frameborder="0" scrolling="no" width="100%" height="70px" src="navigationBar.html"></iframe>
+	</div>
+	<div id="articlefunc">
+		<a href="#">返回我的主页</a>
+		<a href="#">我写过的文章</a>
+		<a id="launch" href="#">保存发布</a>
+	</div>
+	<div id="boardfather">
+		<div id="board">
+			<p>写点什么呢？...</p>
+		</div>
+	</div>
+	<script type="text/javascript">
+    var editor = new wangEditor('board');
+    editor.create();
+	</script>
+</body>
+
+</html>
