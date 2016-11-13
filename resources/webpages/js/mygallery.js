@@ -1,8 +1,8 @@
 $(window).on('load',function(){
   whchange();
-  //logoanimate();
-  pagescroll();
+  logoanimate();
   boxtips();
+  //$(window).scroll(pagescroll());
 })
 //页面分辨率变化时的盒子宽高变化
 function whchange(){
@@ -23,9 +23,23 @@ function whchange(){
     setTimeout(whchange,1);
 }
 
-//页面滚动背景色渐变特效
-function pagescroll(){
+//页面滚动特效
+/*function pagescroll(){
+  var $box = $('.thbx'),
+      boxh = $box.height(),
+      showh = $(window).height()-$box.offsetTop;
 
+      if(showh>=boxh){
+        $box.css('opacity',1);
+      }else{
+        var per = (Math.floor(showh/boxh)*10)/10;
+        $box.css('opacity',"per");
+      }
+}*/
+//整页logo动画
+function logoanimate(){
+  $('.hostinfo').slideDown(750);
+  $('.wrapinfo').fadeIn(2000);
 }
 
 //页面盒子tip
