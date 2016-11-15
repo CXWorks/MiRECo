@@ -1,0 +1,74 @@
+.wmain{
+  margin: 2% auto;
+  width: 960px;
+}
+.navsel{
+  width: 963px;
+  height: 70px;
+  background-color: #fff;
+}
+.navsel li{
+  width: 320px;
+  height: 70px;
+  float: left;
+  list-style: none;
+  line-height: 70px;
+  text-align: center;
+  border-right: 1px #ededed solid;
+  font-size: 20px;
+}
+.seled{
+  background-color: #f43e4b;
+  color: #fff;
+}
+.navsel li:hover{
+  background-color: #fa8072;
+  color: #fff;
+}
+
+.aboutme{
+  width: 960px;
+  height: auto;
+  margin: 2% auto;
+}
+.abbox{
+  width: 960px;
+  height: 280px;
+  background-color: #fff;
+}
+.abouttip{
+  display: block;
+  width: 900px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: 30px;
+  float: left;
+  letter-spacing: 3px;
+}
+.aboutme a{
+  color: #fa8072;
+}
+.ccm{
+  display: block;
+  width: 860px;
+  height: 140px;
+  overflow: hidden;
+  float: right;
+  margin: 20px 30px;
+  font-size: 20px;
+  color: #777;
+}
+.abbox button{
+  display: inline-block;
+  width: 70px;
+  height: 40px;
+  background-color: #fff;
+  border: 2px #fa8072 solid;
+  color: #fa8072;
+  float: right;
+  margin-right: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}

@@ -5,16 +5,31 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>回复中心</title>
-  <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/page.css">
   <script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
-  <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/page.css">
+  <link rel="stylesheet" type="text/css" href="css/dialogue.css">
 </head>
 
 <body>
 	<div class="navframe">
 		<iframe frameborder="0" scrolling="no" width="100%" height="70px" src="navigationBar.html"></iframe>
 	</div>
+
+  <div class="wmain">
+    <ul class="navsel" role="tablist">
+      <li role="presentation" class="seled">提到我的</li>
+      <li role="presentation">付费问答</li>
+      <li role="presentation">相关回复</li>
+    </ul>
+
+    <div class="aboutme">
+      <div class="abbox">
+        <p class="abouttip"><a href="#"><span class="aname">陈左左</span></a>在<a href="#"><span class="thname">某某作品</span></a>中提到了你:</p>
+        <p class="ccm">我认为这个东西非常好，适合我们现在的需求，但是外观上能不能有更多的改进，这样可以吸引更多的边缘用户</p>
+        <button class="ignore">忽略</button><button class="reply">回复</button><button class="see">查看</button>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
