@@ -12,10 +12,10 @@ body{
   src: url('New Cicle Fina.ttf');
 }
 .navwrap{
-	width: 90%;
+	width: 80%;
 	height: 750px;
 	background-color: #ededed;
-	margin: 4% auto;
+	margin: 4.5% auto;
 	cursor: default;
 }
 .gallerynav{
@@ -43,7 +43,6 @@ body{
   text-align: center;
   font-weight:lighter;
   font-size: 28px;
-  font-weight: 500;
   float: right;
   margin-right: 7%;
   cursor: pointer;
@@ -90,8 +89,8 @@ body{
   float: right;
 }
 #scontent{
-	width: 90%;
-	padding: 5%;
+	width: 80%;
+	padding: 4%;
 	background-color: #ededed;
 }
 .thbx{
