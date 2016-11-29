@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="css/board.css">
 	<script type="text/javascript" src="dist/js/lib/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript" src="dist/js/wangEditor.min.js"></script>
+	<script type="application/javascript" src="js/userinfo.js"></script>
 </head>
 
 <body>
@@ -19,16 +20,41 @@
 	<div id="articlefunc">
 		<a href="#">返回我的主页</a>
 		<a href="#">我写过的文章</a>
-		<a id="launch" href="#">保存发布</a>
+		<a id="launch" onclick="submit()">保存发布</a>
 	</div>
+
 	<div id="boardfather">
+	<h4>标题</h4><input type="text" name="title" id="title"/>
 		<div id="board">
 			<p>写点什么呢？...</p>
 		</div>
 	</div>
 	<script type="text/javascript">
     var editor = new wangEditor('board');
+    editor.config.uploadImgUrl = '/server/upload/img';
+	editor.config.uploadParams = {
+    	'phone':localStorage.phone
+	};
+editor.config.uploadImgFileName = 'photo';
+
     editor.create();
+    function submit() {
+    	var html = editor.$txt.html();
+    $.ajax({
+        type: 'POST',
+        url: '/server/upload/html',
+        data: {
+            'html':html,
+            'phone': getPhone(),
+            'title': $('#title').val(),
+            'author': getName()
+        },
+        success:function (data) {
+
+            window.location.replace('/mireco/webpages/articlepage.html?id='+data['id']);
+        }
+    });
+    }
 	</script>
 </body>
 

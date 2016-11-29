@@ -23,3 +23,6 @@ $app->post("/concentrate", 'ConcentrateController@doconcentrate');
 $app->get('/concentrate', 'ConcentrateController@getConcentrate');
 $app->post('/userinfo', 'UserinfoController@douserinfo');
 $app->get('/userinfo', 'UserinfoController@getuserinfo');
+$app->post('/upload/img','DocumentController@uploadImage');
+$app->post('/upload/html','DocumentController@uploadHtml');
+$app->get('/document','DocumentController@getDocument');

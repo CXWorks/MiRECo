@@ -7,4 +7,6 @@ function infoset(){
       $changebtn = $('.changebtn');
 
   $infobox.on()
+
+
 }

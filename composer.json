@@ -1,0 +1,5 @@
+{
+    "require": {
+        "nordsoftware/lumen-image-manager": "^1.1"
+    }
+}

@@ -8,13 +8,33 @@
 	<title>CREATIX,用热爱创造未来</title>
 	<link rel="stylesheet" type="text/css" href="css/page.css">
 	<link rel="stylesheet" type="text/css" href="css/frontpagecontent.css">
+    <link rel="stylesheet" type="text/css" href="css/pagetag.css">
 	<script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
-	<script type="text/javascript" src="js/frontpage.js" /></script>
+	<script type="text/javascript" src="js/frontpage.js" ></script>
+	<script type="application/javascript" src="js/userinfo.js"></script>
 </head>
 
 <body>
 	<div class="navframe">
-		<iframe frameborder="0" scrolling="no" width="100%" height="70px" src="navigationBar.html"></iframe>
+		<!--<iframe frameborder="0" scrolling="no" width="100%" height="70px" src="navigationBar.html"></iframe>-->
+		<div id="nav">
+			<ul id="item">
+				<li><a href="#"><img src="fakeLogo.png" alt="CREATIX"></a></li>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">栏目</a></li>
+				<li><a href="#">栏目</a></li>
+				<li><a href="#">栏目</a></li>
+				<li><a href="#">栏目</a></li>
+			</ul>
+			<form class="search_fm">
+				<input type="text" placeholder="Search" required>
+				<button type="submit"><img src="sb20.png"></button>
+			</form>
+			<ul id="lognreg">
+				<li><a id="log" onclick="window.location.replace('../loginandregister/loginCard.html');">登录</a></li>
+				<li><a id="reg" onclick="window.location.replace('../loginandregister/registerpage.html')">注册</a></li>
+			</ul>
+		</div>
 	</div>
 	<div class="maincontent" id="maincontent">
 		<div class="leftcontent">

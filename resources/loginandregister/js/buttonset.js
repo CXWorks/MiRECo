@@ -30,15 +30,18 @@ function buttonset(){
         $.ajax({
           //window.location.host
           type: 'post',
-          url:'../../server/public/index.php/register',
+          url:'/server/register',
           data:{
             "username":idname,
             "phonenum":phone,
-            "email":"mireco@example.com",
             "password":paswd
           },
           success:function (data,status) {
             if (data['msg']=='success') {
+              localStorage.phone=phone;
+              localStorage.name=idname;
+                localStorage.img='';
+                localStorage.interest='';
               window.location.href='../webpages/frontpage.html';
             }
 

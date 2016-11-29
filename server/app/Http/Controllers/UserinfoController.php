@@ -23,10 +23,10 @@ class userinfoController extends Controller
 	public function getuserinfo(Request $request){
 		$user=$request->input('userphone');
 		
-		$info=DB::table('user')->select('username','email','phone','password')->where('phone',$user)->get();
+		$info=DB::table('users')->select('username','phone','img','word')->where('phone',$user)->first();
 		$interest=DB::table('interest')->select('interest')->where('phone',$user)->get();
 		
-		return response()->json($info,$interest);
+		return response()->json([$info,$interest]);
 	}
 	
 
@@ -36,28 +36,23 @@ class userinfoController extends Controller
 	 */
 	public function douserinfo(Request $request) {
 		$user=$request->input('userphone');
-		
-		$info=DB::table('user')->select('username','email','phone','password')->where('phone',$user)->get();
-		$interest=DB::table('interest')->select('interest')->where('phone',$user)->get();
+        $img=Input::get('img');
+        $word=Input::get('word');
+        $interests=Input::get('interest');
+        DB::table('users')->where('phone',$user)->update(['img'=>$img,'word'=>$word]);
 
-		if ($this->updateinfo($user,$info,$interest)) {
-			return response()->json(['ret'=>'ok','msg'=>'success']);
-		}
-		else 
-			abort(500);
+        DB::table('interest')->where('phone',$user)->delete();
+        foreach ($interests as $interest){
+            DB::table('interest')->insert(['phone'=>$user,'interest'=>$interest]);
+        }
+        return 'ok';
 
-		}
-	}
+    }
+
 
 	
 	
-	private function updateinfo($user,$tar,$interest){		
-		
-		DB::table('concentrate')->where('phone',$user)->update(['username','email','phone','password']=>tar);
-		DB::table('interest')->where('phone',$user)->update('interest'=>$interest);
-		
-		return true;
-	}
+
 	
 
 	
