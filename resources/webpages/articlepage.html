@@ -7,6 +7,9 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/page.css">
 	<link rel="stylesheet" type="text/css" href="css/articlepage.css">
+    <script type="text/javascript" src="dist/js/lib/jquery-1.10.2.min.js"></script>
+	<script type="application/javascript" src="js/userinfo.js"></script>
+
 </head>
 
 <body>
@@ -17,14 +20,30 @@
 		<div class="titleimg"><img src="images/0.jpg" /></div>
 		<div class="articletitle">
 			<div class="articletips">音乐</div>
-			<div class="titlename">不想办茶馆的脱口秀主持不是好的音乐人|原创人说</div>
+			<div id="title" class="titlename">不想办茶馆的脱口秀主持不是好的音乐人|原创人说</div>
 		</div>
+
 		<div class="article">
-			<div class="author">
-				<div class="authorimage"></div>
-				<div class="authorname">田上太郎</div>
-			</div>
+
+            <div class="author">
+                <div class="authorimage"></div>
+                <div id="authorname" class="authorname">田上太郎</div>
+
+            </div>
+            </br>
+            </br>
+            </br>
+            </br>
+            </br>
+            </br>
+            </br>
+            <div id="content"></div>
+
+
+
 		</div>
+
+
 		<div class="comqa">
 			<div class="comqasel">
 				<div class="comqacard" id="comcard">12条评论</div>
@@ -41,5 +60,33 @@
 		</div>
 	</div>
 </body>
+<script type="application/javascript">
+    function getParameterByName(name) {
 
+            url = window.location.href;
+
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
+    var id=getParameterByName('id');
+
+        $.ajax({
+                    type:'get',
+                    url:'/server/document',
+                    data:{
+                        'id':id
+                    },
+                    success:function (data,status) {
+                        $('#title')[0].innerHTML=data['title'];
+                        $('#authorname')[0].innerHTML=data['author'];
+                        $('#content')[0].innerHTML=data['document'];
+                        document.title=data['title'];
+                    }
+                });
+</script>
 </html>

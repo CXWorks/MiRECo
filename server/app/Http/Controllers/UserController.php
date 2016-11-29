@@ -68,12 +68,10 @@ class UserController extends BaseController
 		
 		
 			$password=$request->input('password');
-		
-		
-			$email=$request->input('email');
+
 		
 		//call db
-		DB::table('users')->insert(['username'=>$username,'phone'=>$phone,'email'=>$email,'password'=>$password]);
+		DB::table('users')->insert(['username'=>$username,'phone'=>$phone,'password'=>$password]);
 		return $this->json_ok('success');
 	}
 	/**

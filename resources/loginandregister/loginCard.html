@@ -81,15 +81,28 @@
 			function login() {
 				$.ajax({
 					type:'post',
-					url:'../../server/public/index.php/login/phone',
+					url:'/server/login/phone',
 					data:{
 						'phonenum':$('#tel')[0].value,
 						'password':$('#paswd')[0].value
 					},
 					success:function (data,status) {
 						if (data['msg']=='success') {
-							localStorage.phonenum = $('#tel')[0].value;
-							window.location.href='../webpages/frontpage.html';
+            							$.ajax({
+                      type:'get',
+                      url:'/server/userinfo',
+                      data:{
+                        'userphone':$('#tel')[0].value
+                      },
+                      success:function (data,status) {
+                          localStorage.name=data[0]['username'];
+                          localStorage.phone=data[0]['phone'];
+                          localStorage.img=data[0]['img'];
+                          localStorage.interest='';
+                          window.location.href='../webpages/frontpage.html';
+                      }
+                    });
+
 						}else {
 							alert('error');
 						}
