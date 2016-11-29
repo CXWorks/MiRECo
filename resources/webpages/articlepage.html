@@ -35,7 +35,7 @@
         </div>
 	</div>
 	<div class="content">
-		<div class="titleimg"><img src="images/0.jpg" /></div>
+		<div class="titleimg"><img id="head_img" src="images/0.jpg" /></div>
 		<div class="articletitle">
 			<div class="articletips">音乐</div>
 			<div id="title" class="titlename">不想办茶馆的脱口秀主持不是好的音乐人|原创人说</div>
@@ -104,6 +104,7 @@
                         $('#authorname')[0].innerHTML=data['author'];
                         $('#content')[0].innerHTML=data['document'];
                         document.title=data['title'];
+                        $('#head_img').attr('src','images'+id%6+'.jpg');
                     }
                 });
 </script>
