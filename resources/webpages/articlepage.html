@@ -104,6 +104,8 @@
                         $('#authorname')[0].innerHTML=data['author'];
                         $('#content')[0].innerHTML=data['document'];
                         document.title=data['title'];
+                        if (id==2)
+                            return;
                         $('#head_img').attr('src','images/'+id%6+'.jpg');
                     }
                 });
