@@ -51,7 +51,8 @@
 				<a href="#" target="_blank"><h2>我们和独立设计师陈左左谈了谈“人生”这件事|原创人专访</h2><img src="images/1.jpg"></a>
 				<a href="#" target="_blank"><h2>甜品女王小A老师的幸福说|原创人专访</h2><img src="images/3.jpg"></a>
 			</div>
-			<div class="readbox" onclick="window.location.href='articlepage.html?id=2';">
+            <div id="boxes">
+			<div class="readbox" id="7" onclick="window.location.href='articlepage.html?id=2';">
 				<div class="titimageB">
 					<img src="images/0.jpg" />
 				</div>
@@ -96,9 +97,11 @@
 					<img src="images/5.jpg" />
 				</div>
 				<div class="titleB">
-					<h2>我们和青年珠宝设计师谈了谈人生这件事|原创人专访</h2></div>
+					<h2>我们和青年珠宝设计师谈了谈人生这件事|原创人专访</h2>
+                </div>
 			</div>
 		</div>
+        </div>
 		<div class="rightcontent">
 			<div class="selfcontent">
 				<div class="selfie">这里是头像！</div>
@@ -116,5 +119,34 @@
 		</div>
 	</div>
 </body>
+<script type="application/javascript">
+    $.ajax({
+        type:'get',
+        url:'/server/document/abstract',
+        data:{},
+        success:function (data,status) {
+            if (data.length>7){
+                var id=7;
+                for (var docu in data){
+                    if (docu['id']>7){
+                        var old=document.getElementById(id);
+                        id=docu['id'];
+                        var newnode=document.createElement('div');
+                        newnode.setAttribute('id',docu['id']);
+                        num=id%7;
+                        var string="<div class=\"titleimageS\"><img src=\"images/"+num+".jpg\"> </div> <div class=\"titleS\">"+
+                                "<h2>+docu['title']+</h2></div>"+
+                        "<div class=\"boxtips\">"+
+                                "<div class=\"titletips\">时尚</div>"+
+                                "<div class=\"articletime\">3小时前</div> </div>";
+                        newnode.innerHTML=string;
+                        document.getElementById('boxes').insertBefore(newnode,old);
 
+                    }
+                }
+
+            }
+        }
+    });
+</script>
 </html>
