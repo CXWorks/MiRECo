@@ -48,7 +48,7 @@ class DocumentController extends Controller
     }
 
     public function getTitle(Request $request){
-        $docs=Document::select('id','title','author')->all();
+        $docs=Document::select('id','title','author')->get();
         return response()->json($docs);
     }
 }
