@@ -134,9 +134,11 @@
                         id=docu['id'];
                         var newnode=document.createElement('div');
                         newnode.setAttribute('id',docu['id']);
+                        newnode.setAttribute('class','readbox');
                         num=id%7;
-                        var string="<div class=\"titleimageS\"><img src=\"images/"+num+".jpg\"> </div> <div class=\"titleS\">"+
-                                "<h2>+docu['title']+</h2></div>"+
+                        var string="<div class=\"titleimageS\"><img src=\"images/"+num+".jpg\"> </div> <div class=\"titleS\" "+
+                                "onclick='window.location.href=\"articlepage.html?id="+id+"\"'>"+
+                                "<h2>"+docu['title']+"</h2></div>"+
                         "<div class=\"boxtips\">"+
                                 "<div class=\"titletips\">时尚</div>"+
                                 "<div class=\"articletime\">3小时前</div> </div>";
