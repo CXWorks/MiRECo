@@ -127,7 +127,8 @@
         success:function (data,status) {
             if (data.length>7){
                 var id=7;
-                for (var docu in data){
+                for (i=0;i<data.length;i++){
+                    var docu=data[i];
                     if (docu['id']>7){
                         var old=document.getElementById(id);
                         id=docu['id'];
