@@ -24,37 +24,69 @@
 	</div>
 
 	<div id="boardfather">
-	<h4>标题</h4><input type="text" name="title" id="title"/>
+		<input type="text" name="title" id="title" placeholder="题目叫什么好呢？..."></input>
 		<div id="board">
-			<p>写点什么呢？...</p>
+			<p>写点什么？...</p>
 		</div>
 	</div>
 	<script type="text/javascript">
-    var editor = new wangEditor('board');
-    editor.config.uploadImgUrl = '/server/upload/img';
-	editor.config.uploadParams = {
-    	'phone':localStorage.phone
-	};
-editor.config.uploadImgFileName = 'photo';
+		var editor = new wangEditor('board');
+		editor.config.menus = [
+			'source',
+			'|',
+			'bold',
+			'underline',
+			'italic',
+			'strikethrough',
+			'eraser',
+			'forecolor',
+			'|',
+			'quote',
+			'fontfamily',
+			'fontsize',
+			'head',
+			'unorderlist',
+			'orderlist',
+			'alignleft',
+			'aligncenter',
+			'alignright',
+			'|',
+			'link',
+			'unlink',
+			'|',
+			'img',
+			'video',
+			'insertcode',
+			'|',
+			'undo',
+			'redo',
+			'fullscreen'
+		];
+		editor.config.uploadImgUrl = '/server/upload/img';
+		editor.config.uploadParams = {
+			'phone': localStorage.phone
+		};
+		editor.config.uploadImgFileName = 'photo';
 
-    editor.create();
-    function submit() {
-    	var html = editor.$txt.html();
-    $.ajax({
-        type: 'POST',
-        url: '/server/upload/html',
-        data: {
-            'html':html,
-            'phone': getPhone(),
-            'title': $('#title').val(),
-            'author': getName()
-        },
-        success:function (data) {
+		editor.create();
 
-            window.location.replace('/mireco/webpages/articlepage.html?id='+data['id']);
-        }
-    });
-    }
+		function submit() {
+			var html = editor.$txt.html();
+			$.ajax({
+				type: 'POST',
+				url: '/server/upload/html',
+				data: {
+					'html': html,
+					'phone': getPhone(),
+					'title': $('#title').val(),
+					'author': getName()
+				},
+				success: function(data) {
+
+					window.location.replace('/mireco/webpages/articlepage.html?id=' + data['id']);
+				}
+			});
+		}
 	</script>
 </body>
 

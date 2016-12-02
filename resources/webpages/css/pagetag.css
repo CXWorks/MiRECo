@@ -68,26 +68,52 @@ body {
 .search_fm input {
     width: 128px;
     height: 30px;
-    border: none;
+    background-color: #000;
+    border-bottom: 1px solid #FFF;
+    border-top: none;
+    border-left: none;
+    border-right: none;
     position: relative;
     top: -3px;
     text-decoration: none;
     padding-left: 8px;
     padding-right: 8px;
     font-family: "Microsoft YaHei";
+    color: #FFF;
 }
 
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #999;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #999;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #999;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #999;
+}
+
+
 .search_fm button {
-    background: #F43E4B;
-    width: 32px;
+    background: #000;
+    border: none;
+    width: 30px;
     height: 30px;
     position: relative;
-    left: -4px;
-    border: none;
+    left: -3px;
+    top: 1px;
 }
 
 .search_fm button:hover {
-    background: #FA8072;
     text-decoration: none;
 }
 

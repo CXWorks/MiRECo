@@ -14,103 +14,147 @@ body{
 	background-color: #EDEDED;
 }
 
-#nav{
-	width:100%;
-	height: 60px;
-	background: #000;
-	top: 0px;
-	position: fixed;
-	z-index: 999;
+#nav {
+    width: 100%;
+    height: 60px;
+    background: #000;
+    top: 0px;
+    position: fixed;
+    z-index: 999;
 }
 
-#nav ul#item{
-	width: 960px;
-	height: 60px;
-	position: absolute;
-	left: 50%;
-	margin-left: -480px;
+#nav ul#item {
+    width: 960px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    margin-left: -480px;
 }
 
-#nav ul#item li{
-	width: 100px;
-	height: 60px;
-	float:left;
-	list-style: none;
-	line-height: 60px;
-	text-align: center;
+#nav ul#item li {
+    width: 100px;
+    height: 60px;
+    float: left;
+    list-style: none;
+    line-height: 60px;
+    text-align: center;
 }
 
-#nav ul#item li a{
-	font-size: 15px;
-	font-family: "Microsoft YaHei";
-	font-weight: bold;
+#nav ul#item li a {
+    font-size: 15px;
+    font-family: "Microsoft YaHei";
+    font-weight: bold;
 }
 
-#nav ul#item li a{display: block; color: #FFF; text-decoration: none;}
-
-#nav ul#item li a:hover{color: #F43E4B; text-decoration: none;}
-
-#nav ul#item li img{position: relative; top: 10px; left: -10px;}
-
-.search_fm{
-	position: absolute;
-	left: 50%;
-	margin-left:155px;
-	top: 15px;
-	float: left;
+#nav ul#item li a {
+    display: block;
+    color: #FFF;
+    text-decoration: none;
 }
 
-.search_fm input{
-	width: 128px;
-	height: 30px;
-	border: none;
-	position: relative;
-	top: -3px;
-	text-decoration: none;
-	padding-left: 8px;
-	padding-right: 8px;
-	font-family: "Microsoft YaHei";
+#nav ul#item li a:hover {
+    color: #F43E4B;
+    text-decoration: none;
 }
 
-.search_fm button{
-	background: #F43E4B;
-	width: 32px;
-	height: 30px;
-	position: relative;
-	left: -4px;
-	border: none;
+#nav ul#item li img {
+    position: relative;
+    top: 10px;
+    left: 10px;
 }
 
-.search_fm button:hover{background: #FA8072; text-decoration: none;}
-
-#nav ul#lognreg{
-	width: 120px;
-	height: 60px;
-	position: absolute;
-	left: 50%;
-	margin-left: 360px;
+.search_fm {
+    position: absolute;
+    left: 50%;
+    margin-left: 155px;
+    top: 15px;
+    float: left;
 }
 
-#nav ul#lognreg li{
-	width: 60px;
-	height: 60px;
-	float: left;
-	list-style: none;
-	line-height: 60px;
-	text-align: center;
+.search_fm input {
+    width: 128px;
+    height: 30px;
+    background-color: #000;
+    border-bottom: 1px solid #FFF;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    position: relative;
+    top: -3px;
+    text-decoration: none;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-family: "Microsoft YaHei";
+    color: #FFF;
 }
 
-#nav ul#lognreg li a{
-	font-size: 12px;
-	font-family: "Microsoft YaHei";
-	text-decoration: none;
-	color: #F43E4B;
-	border: 1px solid;
-	border-color: #F43E4B;
-	border-radius: 50px;
-	padding: 8px;
-	padding-top: 11px;
-	padding-bottom: 11px;
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #999;
 }
 
-#nav ul#lognreg li a:hover{color: #FFF; text-decoration: none; background: #F43E4B;}
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #999;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #999;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #999;
+}
+
+
+.search_fm button {
+    background: #000;
+    border: none;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: -3px;
+    top: 1px;
+}
+
+.search_fm button:hover {
+    text-decoration: none;
+}
+
+#nav ul#lognreg {
+    width: 120px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    margin-left: 360px;
+}
+
+#nav ul#lognreg li {
+    width: 60px;
+    height: 60px;
+    float: left;
+    list-style: none;
+    line-height: 60px;
+    text-align: center;
+}
+
+#nav ul#lognreg li a {
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+    text-decoration: none;
+    color: #F43E4B;
+    border: 1px solid;
+    border-color: #F43E4B;
+    border-radius: 50px;
+    padding: 8px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+
+#nav ul#lognreg li a:hover {
+    color: #FFF;
+    text-decoration: none;
+    background: #F43E4B;
+}
