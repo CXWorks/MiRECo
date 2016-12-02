@@ -26,3 +26,4 @@ $app->get('/userinfo', 'UserinfoController@getuserinfo');
 $app->post('/upload/img','DocumentController@uploadImage');
 $app->post('/upload/html','DocumentController@uploadHtml');
 $app->get('/document','DocumentController@getDocument');
+$app->get('/document/abstract','DocumentController@getTitle');

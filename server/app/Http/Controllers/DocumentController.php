@@ -46,4 +46,9 @@ class DocumentController extends Controller
         $d=Document::where('id',$id)->first();
         return response()->json($d);
     }
+
+    public function getTitle(Request $request){
+        $docs=Document::select('id','title','author')->get();
+        return response()->json($docs);
+    }
 }
