@@ -5,14 +5,18 @@
 	����6:57:41
 */
 namespace App\Http\Controllers;
-
 use Laravel\Lumen\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\DB;
 
+
+
+
+
 class UserController extends BaseController
 {
+
 	
 	function checkUnique($table,$key,$value) {
 	
@@ -60,6 +64,7 @@ class UserController extends BaseController
 	 * @return string
 	 */
 	function register(Request $request) {
+
 		
 		
 			$phone=$request->input('phonenum');
@@ -69,9 +74,24 @@ class UserController extends BaseController
 		
 			$password=$request->input('password');
 
+
+
 		
 		//call db
 		DB::table('users')->insert(['username'=>$username,'phone'=>$phone,'password'=>$password]);
+
+
+		$r = new HttpRequest('http://localhost:3000/users/addUser', HttpRequest::METH_GET);
+		$r->addQueryData(array('phone' => $phone,'password'=>$password));
+		try {
+			$r->send();
+			if ($r->getResponseCode() == 200) {
+                return response()->json(['ret'=>'ok','msg'=>"success","bucket"=>$r->getResponseBody()]);
+			}
+		} catch (HttpException $ex) {
+			echo $ex;
+		}
+
 		return $this->json_ok('success');
 	}
 	/**

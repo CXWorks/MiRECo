@@ -24,26 +24,7 @@
   </style>
 </head>
 <body>
-<<<<<<< HEAD
-	<div id="nav">
-			<ul id="item">
-					<li><a href="#"><img src="fakeLogo.png" alt="CREATIX"></a></li>
-					<li><a onclick="window.location.replace('/mireco/webpages/frontpage.html');">首页</a></li>
-					<li><a href="#">栏目</a></li>
-					<li><a href="#">栏目</a></li>
-					<li><a href="#">栏目</a></li>
-					<li><a href="#">栏目</a></li>
-			</ul>
-			<form class="search_fm">
-					<input type="text" placeholder="Search" required>
-					<button type="submit"><img src="sb20.png"></button>
-			</form>
-			<ul id="lognreg">
-					<li><a id="log" onclick="window.location.replace('../loginandregister/loginCard.html');" target="_blank">登录</a></li>
-					<li><a id="reg" onclick="window.location.replace('../loginandregister/registerpage.html')" target="_blank">注册</a></li>
-			</ul>
-	</div>
-=======
+
     <div id="nav">
         <ul id="item">
             <li><a href="#"><img src="fakeLogo.png" alt="CREATIX"></a></li>
@@ -62,7 +43,7 @@
             <li><a id="reg" href="registerpage.html">注册</a></li>
         </ul>
     </div>
->>>>>>> origin/master
+
   <div id="registerCard" class="registerCard">
     <div id="registerTag">登录CREATIX</div>
     <div class="cardContent">
@@ -102,7 +83,7 @@
 			function login() {
 				$.ajax({
 					type:'post',
-					url:'/server/login/phone',
+					url:'/server/index.php/login/phone',
 					data:{
 						'phonenum':$('#tel')[0].value,
 						'password':$('#paswd')[0].value

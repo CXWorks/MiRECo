@@ -80,7 +80,7 @@
 			'redo',
 			'fullscreen'
 		];
-		editor.config.uploadImgUrl = '/server/upload/img';
+		editor.config.uploadImgUrl = '/server/index.php/upload/img';
 		editor.config.uploadParams = {
 			'phone': localStorage.phone
 		};
@@ -92,7 +92,7 @@
 			var html = editor.$txt.html();
 			$.ajax({
 				type: 'POST',
-				url: '/server/upload/html',
+				url: '/server/index.php/upload/html',
 				data: {
 					'html': html,
 					'phone': getPhone(),

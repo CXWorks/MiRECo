@@ -1,7 +1,7 @@
 function checkphone(me,value) {
   $.ajax({
     type: 'get',
-    url:'/server/checkuser',
+    url:'/server/index.php/checkuser',
     data:{
       'check':'phone',
       'phone':value
@@ -19,7 +19,7 @@ function checkphone(me,value) {
 function checkusername(me,value) {
   $.ajax({
     type: 'get',
-    url:'/server/checkuser',
+    url:'/server/index.php/checkuser',
     data:{
       'check':'username',
       'username':value

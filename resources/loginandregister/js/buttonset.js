@@ -30,7 +30,7 @@ function buttonset(){
         $.ajax({
           //window.location.host
           type: 'post',
-          url:'/server/register',
+          url:'/server/index.php/register',
           data:{
             "username":idname,
             "phonenum":phone,

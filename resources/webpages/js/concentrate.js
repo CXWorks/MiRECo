@@ -1,7 +1,7 @@
 function concentrate(source,target) {
   $.ajax({
     type:'post',
-    url:'../../server/public/index.php/concentrate',
+    url:'../../server/index.php/concentrate',
     data:{
       'method':'concentrate',
       'sourceUserphone':source,
@@ -19,7 +19,7 @@ function concentrate(source,target) {
 function unconcentrate(source,target) {
   $.ajax({
     type:'post',
-    url:'../../server/public/index.php/concentrate',
+    url:'../../server/index.php/concentrate',
     data:{
       'method':'cancelconcentrate',
       'sourceUserphone':source,
@@ -37,7 +37,7 @@ function unconcentrate(source,target) {
 function concentrateList(source) {
   $.ajax({
     type:'get',
-    url:'../../server/public/index.php/concentrate',
+    url:'../../server/index.php/concentrate',
     data:{
       'userphone':source
     },
