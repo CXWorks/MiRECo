@@ -80,19 +80,18 @@ class UserController extends BaseController
 		//call db
 		DB::table('users')->insert(['username'=>$username,'phone'=>$phone,'password'=>$password]);
 
+        $url = 'http://localhost:3000/users/addUser?phone='.$phone.'&password='.$password;
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_HTTPGET, 1);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $response = curl_exec($ch);
+        $json = json_decode($response, true);
+        curl_close($ch);
+        print_r($json);
+        $bucket = $json["email"];
 
-		$r = new HttpRequest('http://localhost:3000/users/addUser', HttpRequest::METH_GET);
-		$r->addQueryData(array('phone' => $phone,'password'=>$password));
-		try {
-			$r->send();
-			if ($r->getResponseCode() == 200) {
-                return response()->json(['ret'=>'ok','msg'=>"success","bucket"=>$r->getResponseBody()]);
-			}
-		} catch (HttpException $ex) {
-			echo $ex;
-		}
 
-		return $this->json_ok('success');
+        return response()->json(['ret'=>'ok','msg'=>"success",'bucket'=>$bucket]);
 	}
 	/**
 	 * user login
