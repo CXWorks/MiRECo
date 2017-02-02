@@ -114,7 +114,7 @@ class UserController extends BaseController
 				$phone=$request->input('phonenum');
 				$password=$request->input('password');
 				if ($this->checkLogin($method, $phone, $password)) {
-                    $url = 'http://localhost:3000/users/addUser?phone='.$phone.'&password='.$password;
+                    $url = 'http://localhost:3000/users/login?phone='.$phone.'&password='.$password;
                     $ch = curl_init($url);
                     curl_setopt($ch, CURLOPT_HTTPGET, 1);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
