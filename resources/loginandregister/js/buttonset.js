@@ -38,6 +38,7 @@ function buttonset(){
           },
           success:function (data,status) {
             if (data['msg']=='success') {
+              localStorage.bucket=data['bucket'];
               localStorage.phone=phone;
               localStorage.name=idname;
                 localStorage.img='';

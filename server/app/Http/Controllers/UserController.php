@@ -87,12 +87,12 @@ class UserController extends BaseController
         $response = curl_exec($ch);
         $json = json_decode($response, true);
         curl_close($ch);
-        print_r($json);
-        $bucket = $json["email"];
+        $bucket = $json["bucket"];
 
 
         return response()->json(['ret'=>'ok','msg'=>"success",'bucket'=>$bucket]);
 	}
+
 	/**
 	 * user login
 	 * @param Request $request
@@ -114,7 +114,15 @@ class UserController extends BaseController
 				$phone=$request->input('phonenum');
 				$password=$request->input('password');
 				if ($this->checkLogin($method, $phone, $password)) {
-					return $this->json_ok('success');
+                    $url = 'http://localhost:3000/users/addUser?phone='.$phone.'&password='.$password;
+                    $ch = curl_init($url);
+                    curl_setopt($ch, CURLOPT_HTTPGET, 1);
+                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                    $response = curl_exec($ch);
+                    $json = json_decode($response, true);
+                    curl_close($ch);
+                    $bucket = $json["bucket"];
+                    return response()->json(['ret'=>'ok','msg'=>"success",'bucket'=>$bucket]);
 				}
 				else 
 					return $this->json_ok('fail');

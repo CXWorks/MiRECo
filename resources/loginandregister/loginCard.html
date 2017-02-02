@@ -90,9 +90,10 @@
 					},
 					success:function (data,status) {
 						if (data['msg']=='success') {
+              localStorage.bucket=data['bucket'];
             							$.ajax({
                       type:'get',
-                      url:'/server/userinfo',
+                      url:'/server/index.php/userinfo',
                       data:{
                         'userphone':$('#tel')[0].value
                       },
