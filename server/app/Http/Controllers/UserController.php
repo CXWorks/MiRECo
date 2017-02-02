@@ -87,7 +87,7 @@ class UserController extends BaseController
         $response = curl_exec($ch);
         $json = json_decode($response, true);
         curl_close($ch);
-        $bucket = $json["bucket"];
+        $bucket = $json["msg"];
 
 
         return response()->json(['ret'=>'ok','msg'=>"success",'bucket'=>$bucket]);
@@ -121,7 +121,7 @@ class UserController extends BaseController
                     $response = curl_exec($ch);
                     $json = json_decode($response, true);
                     curl_close($ch);
-                    $bucket = $json["bucket"];
+                    $bucket = $json["msg"];
                     return response()->json(['ret'=>'ok','msg'=>"success",'bucket'=>$bucket]);
 				}
 				else 
