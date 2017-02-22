@@ -327,9 +327,11 @@ class ComposerStaticInit9ed7505840723f69593ae73c08c6038e
     );
 
     public static $classMap = array (
+        'CreateCollaboratorsTable' => __DIR__ . '/../..' . '/database/migrations/2017_02_22_032617_create_collaborators_table.php',
         'CreateConcentrateTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_29_061457_create_concentrate_table.php',
         'CreateDocumentTable' => __DIR__ . '/../..' . '/database/migrations/2016_11_29_055805_create_document_table.php',
         'CreateInterestTable' => __DIR__ . '/../..' . '/database/migrations/2016_11_29_055857_create_interest_table.php',
+        'CreateProjectsTable' => __DIR__ . '/../..' . '/database/migrations/2017_02_22_031557_create_projects_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_14_161414_create_users_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
         'ExampleTest' => __DIR__ . '/../..' . '/tests/ExampleTest.php',

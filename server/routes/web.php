@@ -27,3 +27,8 @@ $app->post('/upload/img','DocumentController@uploadImage');
 $app->post('/upload/html','DocumentController@uploadHtml');
 $app->get('/document','DocumentController@getDocument');
 $app->get('/document/abstract','DocumentController@getTitle');
+
+$app->post('/project/create','ProjectController@createProject');
+$app->get('/project/get','ProjectController@getAllProject');
+$app->post('/project/addCollaborator','ProjectController@addCoworker');
+$app->get('/project/queryCollaborator','ProjectController@queryCoworker');
