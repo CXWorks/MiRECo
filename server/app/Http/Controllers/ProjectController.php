@@ -10,6 +10,7 @@ namespace app\Http\Controllers;
 
 
 use app\Collaborator;
+use app\Paragraph;
 use app\Project;
 use Illuminate\Support\Facades\Request;
 
@@ -51,5 +52,23 @@ class ProjectController extends Controller
         return response()->json($col);
     }
 
+
+    public function createP(Request $request){
+        $author=$request->input('author');
+        $title=$request->input('title');
+        $url=$request->input('url');
+        $p=Paragraph::create(['author'=>$author,'title'=>$title,'url'=>$url]);
+        return response()->json($p);
+    }
+    public function queryPByID(Request $request){
+        $id=$request->input('id');
+        $p=Paragraph::where('id',$id)->first();
+        return response()->json($p);
+    }
+    public function delPByID(Request $request){
+        $id=$request->input('id');
+        Paragraph::where('id',$id)->delete();
+        return response()->json('ok');
+    }
 
 }

@@ -32,3 +32,7 @@ $app->post('/project/create','ProjectController@createProject');
 $app->get('/project/get','ProjectController@getAllProject');
 $app->post('/project/addCollaborator','ProjectController@addCoworker');
 $app->get('/project/queryCollaborator','ProjectController@queryCoworker');
+
+$app->post('/p/create','ProjectController@createP');
+$app->get('/p/query','ProjectController@queryPByID');
+$app->get('/p/delete','ProjectController@delPByID');

@@ -9,7 +9,7 @@ use Laravel\Lumen\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\DB;
-
+require "csrf.php";
 
 
 
@@ -88,7 +88,7 @@ class UserController extends BaseController
         $json = json_decode($response, true);
         curl_close($ch);
         $bucket = $json["msg"];
-
+		csrf($bucket);
 
         return response()->json(['ret'=>'ok','msg'=>"success",'bucket'=>$bucket]);
 	}
