@@ -19,7 +19,7 @@ class CreateArticlesTable extends Migration
             $table->increments('id');
             $table->string("title");
             $table->string('author',20);
-            $table->json('content');
+            $table->string('content');
             $table->string('state');
             $table->timestamps();
             $table->index(['id','author']);

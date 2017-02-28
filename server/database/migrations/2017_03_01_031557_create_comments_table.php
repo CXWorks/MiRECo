@@ -19,7 +19,7 @@ class CreateCommentsTable extends Migration
             $table->increments('id');
             $table->string("article");
             $table->string('author',20);
-            $table->json('content');
+            $table->string('content');
             $table->string('state');
             $table->timestamps();
             $table->index(['id','article']);
