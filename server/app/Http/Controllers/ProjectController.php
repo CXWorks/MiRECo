@@ -12,7 +12,7 @@ namespace app\Http\Controllers;
 use app\Collaborator;
 use app\Paragraph;
 use app\Project;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 use Laravel\Lumen\Routing\Controller as Controller;
 
 class ProjectController extends Controller
