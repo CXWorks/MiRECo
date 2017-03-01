@@ -9,9 +9,9 @@
 namespace app\Http\Controllers;
 
 
-use app\Collaborator;
-use app\Paragraph;
-use app\Project;
+use App\Collaborator;
+use App\Paragraph;
+use App\Project;
 use Illuminate\Http\Request;
 use Laravel\Lumen\Routing\Controller as Controller;
 

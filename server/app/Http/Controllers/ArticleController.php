@@ -9,8 +9,8 @@
 namespace app\Http\Controllers;
 
 
-use app\Article;
-use app\Conment;
+use App\Article;
+use App\Conment;
 use Illuminate\Support\Facades\Request;
 
 class ArticleController extends Controller
